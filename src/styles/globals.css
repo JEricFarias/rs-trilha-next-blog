@@ -1,11 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&display=swap");
-
-/* @custom-variant dark (&:is(.dark *)); */
-
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -15,7 +11,7 @@
   /* BLUE */
   --color-blue-100: #7ea4d7;
   --color-blue-200: #2c85fc;
-  --color-blue-330: #2266c1;
+  --color-blue-300: #2266c1;
   --color-blue-400: #0d284c;
 
   /* CYAN */
@@ -37,7 +33,7 @@
   --radius-md: calc(var(--radius-lg) - 2px);
   --radius-sm: calc(var(--radius-lg) - 4px);
 
-  --font-sans: "PT Sans Caption", "sans-serif";
+  --font-ptsans: "PT Sans Caption";
   --font-inter: "Inter", "sans-serif";
 
   --text-heading-gh: 48px;
