@@ -16,9 +16,9 @@ const customerStory = [
     photo: "/customer/Jacob.jpg",
   },
 ];
-export default function CustomerStorySection() {
+export function CustomerStorySection() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="pt-20 pb-20 md:pt-32 md:pb-40">
       <div className="container ">
         <h2 className="font-ptsans text-center text-heading-md md:text-heading-xl text-gray-100 mb-8 md:mb-12">
           Quem utiliza, aprova!

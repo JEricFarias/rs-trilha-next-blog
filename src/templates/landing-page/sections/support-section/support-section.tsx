@@ -1,10 +1,10 @@
 import { HeartHandshake, PaintbrushVertical, Store } from "lucide-react";
 import Image from "next/image";
 
-export default function SupportSection() {
+export function SupportSection() {
   return (
     <section className="relative w-full flex flex-col gap-12 bg-gradient-to-r from-gray-500 to-gray-700 py-32 overflow-clip">
-      <div className="container flex flex-col gap-12 z-50">
+      <div className="container flex flex-col gap-12 z-10">
         <h2 className="font-ptsans text-heading-md md:text-heading-xl text-gray-100 text-center">
           Sua loja de afiliados, simples, do jeito que deveria ser
         </h2>
@@ -14,7 +14,7 @@ export default function SupportSection() {
             <div className="p-2 rounded-lg bg-blue-300 mb-4 w-fit">
               <PaintbrushVertical className="h-5 w-5 text-white" />
             </div>
-            <strong className="text-heading-sm text-gray-100 pb-2">
+            <strong className="font-ptsans text-heading-sm text-gray-100 pb-2">
               Personalize seu site
             </strong>
             <p className="text-body-sm text-gray-200">
@@ -26,7 +26,7 @@ export default function SupportSection() {
             <div className="p-2 rounded-lg bg-cyan-200 mb-4 w-fit">
               <Store className="h-5 w-5 text-white" />
             </div>
-            <strong className="text-heading-sm text-gray-100 pb-2">
+            <strong className="font-ptsans text-heading-sm text-gray-100 pb-2">
               Venda de qualquer loja
             </strong>
             <p className="text-body-sm text-gray-200">
@@ -38,7 +38,7 @@ export default function SupportSection() {
             <div className="p-2 rounded-lg bg-blue-300 mb-4 w-fit">
               <HeartHandshake className="h-5 w-5 text-white" />
             </div>
-            <strong className="text-heading-sm text-gray-100 pb-2">
+            <strong className="font-ptsans text-heading-sm text-gray-100 pb-2">
               Receba suporte amigável
             </strong>
             <p className="text-body-sm text-gray-200">

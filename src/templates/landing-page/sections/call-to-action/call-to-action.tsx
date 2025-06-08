@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function CallToAction() {
+export function CallToAction() {
   return (
     <section className="relative w-full flex flex-col items-center bg-radial-[at_50%_0%] from-blue-300/70 from-[2%] via-blue-300/35 via-[22%] to-transparent to-[91%]">
       <div className="z-30 bg-cyan-300 rounded-full w-fit p-3.5 md:p-4 mx-auto -mt-8">

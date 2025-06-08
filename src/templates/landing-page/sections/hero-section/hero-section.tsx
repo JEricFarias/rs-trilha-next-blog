@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <section className="container relative flex items-center justify-center mt-16 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  items-center">
