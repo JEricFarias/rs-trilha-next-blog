@@ -1,4 +1,4 @@
-import { BlogList } from "@/templates/blog-list";
+import { BlogList } from "@/templates/blog";
 
 export default function BlogPage() {
   return <BlogList />;
