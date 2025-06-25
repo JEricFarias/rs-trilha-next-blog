@@ -21,7 +21,7 @@ export function BlogList() {
   const hasPosts = posts.length > 0;
 
   return (
-    <div className="container mt-[85px] md:mt-[145px] w-full space-y-6 md:space-y-14">
+    <div className="container my-[85px] md:my-[145px] w-full space-y-6 md:space-y-14">
       <header className="grid gap-6 grid-cols-1 md:grid-cols-2 items-end justify-items-end">
         <div className="flex flex-col gap-3 justify-self-start">
           <span className="bg-cyan-300 text-cyan-100 text-body-tag py-1.5 px-3 uppercase w-fit rounded-sm">
