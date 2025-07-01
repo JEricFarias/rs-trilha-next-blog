@@ -6,7 +6,7 @@ import React, { useCallback, useState } from "react";
 export function Search() {
   const router = useRouter();
   const q = router.query.q as string;
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(q);
 
   const handleSearch = useCallback(
     (event: React.FormEvent) => {

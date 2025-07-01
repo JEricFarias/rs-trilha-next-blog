@@ -47,7 +47,9 @@ export function useShare({
           "width=600,height=600,location=yes,status=yes"
         );
         return !!shareWindow;
-      } catch (error) {}
+      } catch (error) {
+        console.error(error);
+      }
     },
     [shareConfig, handleCopy, url]
   );

@@ -5,7 +5,7 @@ type MarkdownProps = {
   content: string;
   className?: string;
 };
-export function Markdown({ content, className }: MarkdownProps) {
+export function Markdown({ content }: MarkdownProps) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

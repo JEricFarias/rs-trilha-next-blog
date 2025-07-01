@@ -25,7 +25,10 @@ export function CustomerStorySection() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {customerStory.map((story) => (
-            <div className="bg-gray-600 rounded-xl border border-gray-400 p-6 md:p-10 flex flex-col gap-8 md:gap-10">
+            <div
+              key={story.name}
+              className="bg-gray-600 rounded-xl border border-gray-400 p-6 md:p-10 flex flex-col gap-8 md:gap-10"
+            >
               <p className="text-gray-200 text-body-md italic">
                 {story.comment}
               </p>

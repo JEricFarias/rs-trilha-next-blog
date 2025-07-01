@@ -1,7 +1,6 @@
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import { allPosts } from "contentlayer/generated";
+import { Post } from "contentlayer/generated";
 
 import {
   Breadcrumb,
@@ -14,12 +13,11 @@ import { Avatar } from "@/components/avatar";
 import { Markdown } from "@/components/markdown";
 import { Share } from "@/components/share";
 
-export function PostPage() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const post = allPosts.find(
-    (post) => post.slug.toLowerCase() === slug?.toLowerCase()
-  );
+export type PostPageProps = {
+  post: Post;
+};
+
+export function PostPage({ post }: PostPageProps) {
   const publishedAt = new Date(post?.date ?? Date.now()).toLocaleDateString(
     "pt-BR"
   );

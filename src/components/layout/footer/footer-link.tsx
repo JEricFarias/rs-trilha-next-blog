@@ -18,7 +18,7 @@ export function FooterLink({
       className={`text-primary text-blue-100 text-body-sm hover:text-blue-200 ${className}`}
       {...rest}
     >
-      Termos de uso
+      {children}
     </Link>
   );
 }
