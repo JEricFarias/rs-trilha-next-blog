@@ -14,7 +14,7 @@ type UseShareProps = ShareConfig & {
 export function useShare({
   url,
   title,
-  text,
+  description: text,
   clipboardTimeout = 2000,
 }: UseShareProps) {
   const { isCopied, handleCopy } = useClipboard({ timeout: clipboardTimeout });

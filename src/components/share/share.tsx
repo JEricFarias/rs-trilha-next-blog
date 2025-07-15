@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { useShare } from "@/hooks/use-share";
 import { Post } from "contentlayer/generated";
@@ -12,7 +14,7 @@ export function Share({ post }: ShareProps) {
   const { shareButtons } = useShare({
     url: postUrl,
     title: title,
-    text: description,
+    description,
   });
 
   return (

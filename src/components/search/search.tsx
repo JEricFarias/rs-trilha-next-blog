@@ -1,12 +1,16 @@
 import { cn } from "@/lib/utils";
 import { CircleX, SearchIcon } from "lucide-react";
-import { useRouter } from "next/router";
-import React, { useCallback, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export function Search() {
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
-  const q = router.query.q as string;
+  const searchParams = useSearchParams();
+
+  const q = searchParams?.get("q") ?? "";
   const [query, setQuery] = useState(q);
+  const hasQuery = searchParams?.has("q");
 
   const handleSearch = useCallback(
     (event: React.FormEvent) => {
@@ -20,12 +24,15 @@ export function Search() {
   );
 
   const handleResetSearch = () => {
-    router.push("/blog", undefined, {
-      shallow: true,
+    router.push("/blog", {
       scroll: false,
     });
     setQuery("");
   };
+
+  useEffect(() => {
+    if (hasQuery) inputRef.current?.focus();
+  }, [hasQuery]);
 
   return (
     <form onSubmit={handleSearch} className="relative group w-full md:w-60">
@@ -36,6 +43,7 @@ export function Search() {
         )}
       />
       <input
+        ref={inputRef}
         value={query}
         type="text"
         placeholder="Buscar"
